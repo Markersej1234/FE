@@ -14,9 +14,21 @@ const Navbar = ({user, loggedIn, logout}) => {
                     
                     
                    
-                    {loggedIn && isAdmin &&
+                    {loggedIn &&
                         <MenuLink to="/bookings" ativestyle="true">
                             Bookings
+                        </MenuLink>
+                    }
+
+                    {loggedIn &&
+                        <MenuLink to="/assistants" ativestyle="true">
+                            Assistants
+                        </MenuLink>
+                    }
+
+                    {loggedIn && isAdmin &&
+                        <MenuLink to="/createAssistant" ativestyle="true">
+                            create assistant
                         </MenuLink>
                     }
                    
@@ -26,11 +38,6 @@ const Navbar = ({user, loggedIn, logout}) => {
                         </MenuLink>
                     }
                  
-                    {loggedIn && isAdmin &&
-                        <MenuLink to="/" ativestyle="true">
-                            4
-                        </MenuLink>
-                    }
                     
                    
 

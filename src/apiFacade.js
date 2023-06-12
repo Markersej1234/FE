@@ -65,6 +65,16 @@ function readJWTTokken(token) {
     return JSON.parse(jsonPayload);
 }
 
+const getAllAssistants = () => {
+  const options = makeOptions("GET",true, null);
+  return fetch(URL + `/api/assistant/all`, options).then(r => r.json());
+}
+
+const createAssistant = (assistants) => {
+  const options = makeOptions("POST",true, assistants); //True add's the token
+  return fetch(URL + `/api/assistant/create`, options).then(r => r.json());
+}
+
 const createIngredient = (ingredient) => {
   const options = makeOptions("POST",true, ingredient); //True add's the token
   return fetch(URL + `/api/ingredient/create`, options).then(r => r.json());
@@ -94,6 +104,8 @@ const deleteBooking = (bookings) => {
   getAllBookings,
   createIngredient,
   deleteBooking,
+  createAssistant,
+  getAllAssistants
 
  }
 }

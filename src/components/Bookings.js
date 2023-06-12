@@ -19,7 +19,7 @@ const Bookings = () => {
     
     return (
         <div>
-            <h1>All ingredients</h1>
+            <h1>All Bookings</h1>
             {bookings &&
                 <Table striped bordered hover >
                     <thead>
