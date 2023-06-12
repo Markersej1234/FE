@@ -11,9 +11,6 @@ const Navbar = ({user, loggedIn, logout}) => {
             <PrimaryNav>
                 <Hamburger/>
                 <Menu>
-                    
-                    
-                   
                     {loggedIn &&
                         <MenuLink to="/bookings" ativestyle="true">
                             Bookings
@@ -31,16 +28,7 @@ const Navbar = ({user, loggedIn, logout}) => {
                             create assistant
                         </MenuLink>
                     }
-                   
-                   {loggedIn && isAdmin &&
-                        <MenuLink to="/createIngredient" ativestyle="true">
-                            create ingredient
-                        </MenuLink>
-                    }
-                 
-                    
-                   
-
+                                     
                     
                     {loggedIn ? (<MenuLink to="/" ativestyle="true" onClick={logout}> Logout </MenuLink> ) : (<MenuLink to="/login" ativestyle="true"> Login </MenuLink>)}
 

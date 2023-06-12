@@ -39,7 +39,7 @@ const CreateAssistant = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="pricePerHour">
-                    <Form.Label>Experience</Form.Label>
+                    <Form.Label>Price per hour</Form.Label>
                     <Form.Control onChange={(e) => setAssistants({...assistants, pricePerHour: e.target.value})} required type="text" value={assistants.pricePerHour}  placeholder="PricePerHour" />
                 </Form.Group>
 
