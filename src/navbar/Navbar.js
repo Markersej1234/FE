@@ -15,8 +15,8 @@ const Navbar = ({user, loggedIn, logout}) => {
                     
                    
                     {loggedIn && isAdmin &&
-                        <MenuLink to="/ingredients" ativestyle="true">
-                            Ingredients
+                        <MenuLink to="/bookings" ativestyle="true">
+                            Bookings
                         </MenuLink>
                     }
                    
@@ -28,7 +28,7 @@ const Navbar = ({user, loggedIn, logout}) => {
                  
                     {loggedIn && isAdmin &&
                         <MenuLink to="/" ativestyle="true">
-                            4 
+                            4
                         </MenuLink>
                     }
                     

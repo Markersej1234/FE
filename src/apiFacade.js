@@ -70,14 +70,14 @@ const createIngredient = (ingredient) => {
   return fetch(URL + `/api/ingredient/create`, options).then(r => r.json());
 }
 
-const getAllIngredients = () => {
+const getAllBookings = () => {
   const options = makeOptions("GET",true, null);
-  return fetch(URL + `/api/ingredient/all`, options).then(r => r.json());
+  return fetch(URL + `/api/booking/all`, options).then(r => r.json());
 }
 
-const deleteIngredient = (ingredients) => {
+const deleteBooking = (bookings) => {
   const options = makeOptions("DELETE", true, null); //True add's the token
-  return fetch(URL + `/api/ingredient/delete/`+ingredients, options).then(r => r.json());
+  return fetch(URL + `/api/booking/delete/`+bookings, options).then(r => r.json());
 }
 
 
@@ -91,9 +91,9 @@ const deleteIngredient = (ingredients) => {
   logout,
   fetchData,
   readJWTTokken,
-  getAllIngredients,
+  getAllBookings,
   createIngredient,
-  deleteIngredient,
+  deleteBooking,
 
  }
 }

@@ -5,8 +5,8 @@ import Navbar from "../navbar/Navbar";
 import LoginForm from "../components/LoginForm";
 import { ToastContainer, toast } from 'react-toastify';
 import Frontpage from './Frontpage';
-import Ingredients from './Ingredients';
 import CreateIngredient from './CreateIngredient';
+import Bookings from './Bookings';
 
 
 const Content = ({ loggedIn,login,user,logout}) => {
@@ -27,7 +27,7 @@ const Content = ({ loggedIn,login,user,logout}) => {
             <Routes>
                 <Route path="/login" element={<LoginForm login={login}/>}/>
                 <Route path="/frontpage" element={<Frontpage/>}/>
-                <Route path="/ingredients"element={<Ingredients/>} />
+                <Route path="/bookings"element={<Bookings/>} />
                 <Route path="/CreateIngredient" element={<CreateIngredient/>}/>
 
             </Routes>
